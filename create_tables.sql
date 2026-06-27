@@ -19,14 +19,16 @@ status varchar(50)
 
 create table contacts (
 contact_id int primary key ,
-\customer_id int not null,
-contact_name varchar(30) not null,phone varchar(30),
+customer_id int not null,
+contact_name varchar(30) not null,
+phone varchar(30),
 foreign key (customer_id) references customers(customer_id)
 );
 
 create table employees (
 employee_id int primary key ,
-employee_name varchar(30) not null,department varchar(50),
+employee_name varchar(30) not null,
+department varchar(50),
 email varchar(30),unique(email)
 );
 
